@@ -1,0 +1,11 @@
+Welcher Transistor schaltet bei hohem Spannungspegel durch?	Ein nMOS-Transistor.
+Welcher Transistor schaltet durch, wenn das Gate gegen Source eine negative Spannung aufweist?	Ein pMOS-Transistor.
+Was ist ein Transmissiong-Gate?	Eine Kombination aus pMOS- und nMOS-Transistoren, das dazu dient die abschwächenden Effekte (1 bei nMOS, 0 bei pMOS) zu umgehen.
+Was heißt CMOS?	Complementary Metal Oxide Semiconductor
+Was ist ein Implikant k-ter Ordnung?	Ein Implikant, der 2^k Felder im KV-Diagramm umfasst. (Entspricht einem Würfel mit 2^k don't-care Stellen)
+Welche Widerstandsverhältnisse chrakterisieren einen nMOS-Transistor?	Er schaltet eine logische 0 gut, eine logische 1 schlecht durch.
+<span style=" font-style: normal; font-weight: normal;">Welche Widerstandsverhältnisse chrakterisieren einen pMOS-Transistor?</span>	Er schaltet eine logische 0 schlecht, eine logische 1 gut durch.
+Wie realisiert man im Allgemeinen eine n-stellige boolsche Funktion in einer CMOS Schaltung?	In zwei Teilnetzen, einem p-Netz (aus pMOS), einem n-Netz (aus nMOS).
+Wann schaltet das n-Netz einer CMOS Schaltung? Und von wo nach wo?	Das n-Netz schaltet einen Pfad von GND nach y durch, wenn der Funktionswert für die Eingangsbelegung gleich 0 ist.
+Wann schaltet das p-Netz einer CMOS Schaltung? Und von wo nach wo?	Das p-Netz schaltet einen Pfad von Vdd nach y (Ausgang) durch, wenn der Funktionswert für die Eingangsbelegung gleich 1 ist.
+Wann kann man eine boolsche Funktion als CMOS Schaltung mit n- und p-Netz realisieren?	Wenn eine disjunktive oder konjunktive Form der Funktion existiert, in der alle Variablen negiert vorkommen.
