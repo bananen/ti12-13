@@ -4,10 +4,31 @@ Was ist ein Transmissiong-Gate?	Eine Kombination aus pMOS- und nMOS-Transistoren
 Was heißt CMOS?	Complementary Metal Oxide Semiconductor
 Was ist ein Implikant k-ter Ordnung?	Ein Implikant, der 2^k Felder im KV-Diagramm umfasst. (Entspricht einem Würfel mit 2^k don't-care Stellen)
 Welche Widerstandsverhältnisse chrakterisieren einen nMOS-Transistor?	Er schaltet eine logische 0 gut, eine logische 1 schlecht durch.
-<span style=" font-style: normal; font-weight: normal;">Welche Widerstandsverhältnisse chrakterisieren einen pMOS-Transistor?</span>	Er schaltet eine logische 0 schlecht, eine logische 1 gut durch.
+Welche Widerstandsverhältnisse chrakterisieren einen pMOS-Transistor?	Er schaltet eine logische 0 schlecht, eine logische 1 gut durch.
 Wie realisiert man im Allgemeinen eine n-stellige boolsche Funktion in einer CMOS Schaltung?	In zwei Teilnetzen, einem p-Netz (aus pMOS, schaltet, wenn der Funktionswert 1 ist), einem n-Netz (aus nMOS, schaltet, wenn der Funktionswert 0 ist).
 Wann schaltet das n-Netz einer CMOS Schaltung? Und von wo nach wo?	Das n-Netz schaltet einen Pfad von GND nach y durch, wenn der Funktionswert für die Eingangsbelegung gleich 0 ist.
 Wann schaltet das p-Netz einer CMOS Schaltung? Und von wo nach wo?	Das p-Netz schaltet einen Pfad von Vdd nach y (Ausgang) durch, wenn der Funktionswert für die Eingangsbelegung gleich 1 ist.
 Wann kann man eine boolsche Funktion als CMOS Schaltung mit n- und p-Netz realisieren?	Wenn eine disjunktive oder konjunktive Form der Funktion existiert, in der alle Variablen negiert vorkommen.
 Wann ist ein Primimplikant ein Kernprimimplikant?	Wenn er einen Minterm einer Funktion überdeckt, der von keinem anderen Primimplikanten überdeckt wird.
 Was sind partiell definierte boolsche Funktionen?	Funktionen, bei denen der Funktionswert nur für bestimmte Eingangsbelegungen definiert ist, die nicht definierten bezeichnet man als don't-care-Belegungen.
+Was macht ein Multiplexer (MUX)?	Er schaltet einen von 2^n Eingängen (der über n Steuerleitungen ausgewählt wird) auf den Ausgang durch.
+Was ist ein PLA?	Ein PLA (programmable logic array) ist ein Baustein, mit dem sich boolsche Funktionen realisieren lassen. Im Gegensatz zum ROM liegen an den Eingängen jedoch keine Minterme, sondern Primimplikanten der Minimalüberdeckung an.
+Wie ist ein PLA prinzipiell aufgebaut?	Aus einer UND- und einer ODER-Matrix. Die UND-Matrix erzeugt in jeder Zeile einen Primimplikanten. In der ODER-Matrix erfolgt dann die disjunktive Verknüpfung der Primimplikanten.
+Was ist der Unterschied zwischen einem PLA und einem FPLA?	Ein PLA (programmable logic array) wird bereits in der Herstellung personalisiert, ein FPLA (field programmable logic array) ist ein vom Nutzer zu programmierendes PLA mit einer festen Anzahl an Eingängen, Ausgängen und Produkttermen.
+Was ist eine PAL?	Eine PAL (programmable array logic) ist ein PLA-Baustein, bei dem die ODER-Matrix bereits in der Herstellung personalisiert wurde.
+Was ist ein vollkundenspezifischer Entwurf (full custom design)?	Bei diesem Entwurfsstil werden keinerlei Beschränkungen gemacht, um für jede Schaltung das optimale Layout zu erhalten.
+Was ist ein Zellenentwurf (cell design)?	Beim Zellenentwurf wird auf eine Bibliothek bestehender Zellen zurückgegriffen. Das Layout besteht darin diese zu platzieren und zu verdrahten.
+Was ist ein Entwurf mit Arrays (array logic)?	Man geht beim Entwurf mit Arrays von einer vorgefertigten regelmäßigen Anordnung von Transistoren aus. Das Layout beschränkt sich hier auf den Entwurf der Verbindungen in einer oder mehreren Verdrahtungsebenen.
+Was ist ein Entwurf mit programmierbaren Schaltungen (programmable logic)?	Hier beschränkt sich der Entwurf auf die Programmierung von anwenderprogrammierbaren Schaltungen.
+Was ist Addierbarkeit von Totzeiten?	Zwei beliebige hintereinanderliegende Totzeiten können addiert und durch ihre Summer ersetzt werden.
+Was bedeutet Durchschiebbarkeit von Totzeiten?	Ein Totzeitglied, welches hinter einem Gatter mit beliebiger Verknüpfungsfunktion f liegt, kann durch das Gatter an alle Eingänge vorgeschoben werden.
+Wie kann man sich Verschiebbarkeit und Addierbarkeit von Totzeiten zunutze machen?	Durch Verschieben und Addieren der Totzeiten kann man jedes Schaltnetz in einem Modell darstellen, das einen Verzögerungs- und einen Verknüpfungsteil enthält.
+Was ist ein Hasardfehler?	&nbsp;Ein Hasardfehler ist die mehrmalige Änderung der ausgangsvariablen während eines Übergangs.
+Was ist ein Übergang?	Ein Übergang ist der Vorgang im Schaltnetz, der vom Eingabewechsel ausgelöst wird, mit diesem beginnt und mit dem Eintreten eines neuen Ruhezustands endet.
+Was ist ein Hasard?	Ein Hasard ist die durch das Schaltnetz logisch-strukturelle Vorbedingung für einen Hasardfehler, ohne Berücksichtigung der konkreten Verzögerungswerte.
+Impliziert ein Hasard einen Hasardfehler?	Nein. Ein Hasard in Kombination mit ungünstigen Verzögerungswerten resultieren in einem Hasardfehler.
+Was ist ein dynamischer, was ein statischer Übergang?	Ein dynamischer Übergang ist ein Übergang, bei dem sich Anfangs- und Endwert des Ausgangssignals ändern. Beim statischen Übergang sind diese gleich.
+Kann ein Übergang bei dem genau eine Eingabevariable wechselt einen Funktionshasard enthalten?	Nein.
+Wie lautet die allgemeine Regel zur Beseitigung eines 1-Strukturhasards?	Man realisiere mit einem UND-Glied einen Primimplikanten, der sowohl die Anfangs- wie auch die Endbelegung des Übergangs enthält und verknüpfe den UND-Ausgang disjunktiv mit den bisherigen Schaltnetz-Ausgängen.
+Wie lautet die allgemeine Regel zur Beseitigung eines 0-Strukturhasards?	Man realisiere mit einem ODER-Glied ein Primimplikat, das sowohl die Anfangs- wie auch die Endbelegung des Übergangs enthält und verknüpfe den ODER-Ausgang konjunktiv mit den bisherigen Schaltnetz-Ausgängen.
+Wie lautet der Satz von Eichelberger?	Ein Schaltnetz, das durch die Disjunktion aller Primimplikanten oder die Konjunktion aller Primimplikate einer gegebenen Funktion realisiert wird, ist frei von:<div><br /></div><div>- allen statischen Strukturhasards</div><div><br /></div><div>- allen dynamischen Strukturhasards, falls nur eine Eingabevariable wechselt</div>
