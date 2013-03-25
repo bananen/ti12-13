@@ -32,3 +32,19 @@ Kann ein Übergang bei dem genau eine Eingabevariable wechselt einen Funktionsha
 Wie lautet die allgemeine Regel zur Beseitigung eines 1-Strukturhasards?	Man realisiere mit einem UND-Glied einen Primimplikanten, der sowohl die Anfangs- wie auch die Endbelegung des Übergangs enthält und verknüpfe den UND-Ausgang disjunktiv mit den bisherigen Schaltnetz-Ausgängen.
 Wie lautet die allgemeine Regel zur Beseitigung eines 0-Strukturhasards?	Man realisiere mit einem ODER-Glied ein Primimplikat, das sowohl die Anfangs- wie auch die Endbelegung des Übergangs enthält und verknüpfe den ODER-Ausgang konjunktiv mit den bisherigen Schaltnetz-Ausgängen.
 Wie lautet der Satz von Eichelberger?	Ein Schaltnetz, das durch die Disjunktion aller Primimplikanten oder die Konjunktion aller Primimplikate einer gegebenen Funktion realisiert wird, ist frei von:&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;- allen statischen Strukturhasards&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;- allen dynamischen Strukturhasards, falls nur eine Eingabevariable wechselt&lt;/div&gt;
+Wie lautet das Mikroprogramm fuer die Lesephase der Mima?	1. IAR -&gt; SAR; IAR -&gt; X; R=1<div>2. Eins -&gt; Y; R=1</div><div>3. ALU auf Addieren; R=1</div><div>4. Z -&gt; IAR</div><div>5. SDR -&gt; IR</div>
+Was sind wesentliche Eigenschaften von RISC Prozessoren?	Einfache Befehle, Ausfuehrung in einem Taktzyklus, nur Lade- und Speicherbefehle greifen auf Speicher zu, intensives Pipelining, festverdrahtete Hardware, Befehle in fester Laenge, Komplexitaet im Compiler, mehrere Registersaetze
+Wofuer steht MIPS?	Microprocessor without Interlocked Pipeline Stages
+Was sind Pseudoinstruktionen?	Makros auf Assemblerebene
+Was sind die Stufen der DLX-Pipeline?	1. Instruction Fetch (IF), 2. Instruction Decode/Register Fetch (ID/RF), 3. Execute/Address Calculation (EX), 4. Memory Access (MEM), 5. Write Back (WB)
+In welchem Modus arbeiten asynchrone Schaltwerke oft?	Im normal fundamental mode
+Was ist der normal fundamental mode?	In diesem Modus darf sich maximal eine Eingangsvariable aendern und das erst wieder, wenn sich der Zustand stabilisiert hat
+Welche Eigenschaften von Programmen machen die Verwendung von Caches nuetzlich?	Zeitliche und oertliche Lokalitaet
+Was besagt das Mooresche Gesetz?	Anzahl der Transistoren pro Chip verdoppelt sich alle 2 Jahre, Verarbeitungsleitung von Hochleistungsprozessoren verdoppelt sich alle 18 Monate, bei gleichen Preis nach 2 Jahren doppelte Leistung
+Was sind die Entwurfsebenen des Y-Diagramm?	Von innen nach außen: elektr, Logik, Register-Transfer, Architektur, System
+Was sind die Sichtweisen des Y-Diagramms?	Verhalten: Was?, Struktur: Wie?, Geometrie: Wo?
+Wie ist eine 32-Bit-Adresse im IEEE 754-Floating-Point-Standard aufgeteilt?	Bits 0-22: Mantisse<div>Bits 23-30: Charakteristik</div><div>Bit 31: Vorzeichen</div>
+Wie ist die Leistungssteigerung S fuer Pipelines definiert?	S = (n*k)/(k+n-1), mit n Befehlen und k Stufen
+Welche Software-Loesungen existieren fuer Datenkonflikte?	Einfuegen von Leeroperationen und umordnen der Befehle durch den Compiler
+Welche Hardware-Loesungen existieren fuer Datenkonflikte?	Leerlauf der Pipeline, Forwarding (Result und Load)
+Was ist der Fast Page Mode?	Hierbei bleibt das RAS-Signal nach dem ersten Lesezyklus aktiv, sodass die entsprechende Zeile aktiv bleibt
