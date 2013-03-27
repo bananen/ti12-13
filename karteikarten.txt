@@ -48,3 +48,7 @@ Wie ist die Leistungssteigerung S fuer Pipelines definiert?	S = (n*k)/(k+n-1), m
 Welche Software-Loesungen existieren fuer Datenkonflikte?	Einfuegen von Leeroperationen und umordnen der Befehle durch den Compiler
 Welche Hardware-Loesungen existieren fuer Datenkonflikte?	Leerlauf der Pipeline, Forwarding (Result und Load)
 Was ist der Fast Page Mode?	Hierbei bleibt das RAS-Signal nach dem ersten Lesezyklus aktiv, sodass die entsprechende Zeile aktiv bleibt
+Wie lautet die Formel zur Berechnung der Anzahl der benoetigten Pruefbits fuer eine 1-Bit-Fehlerkorrektur?	2^k &gt;= m + k + 1, mit k Anzahl der Pruefbits und m Anzahl der Datenbits
+Wie lautet die charakteristische Gleichung des JK-Flipflops?	q^(t+1) = ((j and not q) or (not k and q))^t
+Wie lautet die charakteristische Gleichung des D-Flipflops?	q^(t+1) = d
+Wie lautet die charakteristische Gleichung des RS-Flipflops?	q^(t+1) = s or (q^t and not r)
